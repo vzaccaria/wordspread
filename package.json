@@ -1,7 +1,7 @@
 {
   "name": "wordspread",
   "version": "0.0.2",
-  "description": "No name given yet",
+  "description": "Create submission links to Reddit and HN",
   "main": "index.js",
   "bin": {
     "wordspread": "./index.js"
