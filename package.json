@@ -1,6 +1,6 @@
 {
   "name": "wordspread",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create submission links to Reddit and HN",
   "main": "index.js",
   "bin": {
