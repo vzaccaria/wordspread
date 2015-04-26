@@ -4,7 +4,7 @@ var c = require('chalk')
 var _module = () => {
 
   var msg = () => {
-    console.log("Use (⌘ +double click) to open links on OSX");
+    console.log("Use (⌘ + double click) to open links on OSX");
   }
 
   var link = _ => {
