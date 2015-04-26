@@ -61,6 +61,27 @@ function postHn(title, url, opts) {
   return `https://news.ycombinator.com/submitlink?${form.encode(data)}`
 }
 
+function postEcho(title, url) {
+  "use strict"
+
+  var data = {
+    u: url,
+    t: title
+  }
+  return `http://www.echojs.com/submit?${form.encode(data)}`
+}
+
+function postTwitter(title, url) {
+  "use strict"
+
+  var data = {
+    url: url,
+    text: `${title} — `
+  }
+  return `http://twitter.com/share?${form.encode(data)}`
+}
+
+// javascript:(function(){f='http://twitter.com/share?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title);a=function(){if(!window.open(f))location.href=f};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})()
 var main = () => {
   "use strict"
   var opts = (getOptions(doc))
@@ -71,6 +92,8 @@ var main = () => {
   msg()
   logger.log("**HN**: ", link(postHn(title, url, opts)))
   logger.log(`**Reddit /r/${opts.subreddit}**: `, link(postReddit(title, url, opts)))
+  logger.log(`**Echo JS**: `, link(postEcho(title, url)))
+  logger.log(`**Twitter**: `, link(postTwitter(title, url)))
 }
 
 main()
