@@ -80,7 +80,7 @@ function postTwitter(title, url) {
 
   var data = {
     url: url,
-    text: "" + title
+    text: "" + title + " — "
   };
   return "http://twitter.com/share?" + form.encode(data);
 }
